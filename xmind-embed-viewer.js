@@ -1,0 +1,110 @@
+const selectFileFromLocal = async (ext) => {
+    const fileSelector = document.createElement('input')
+    fileSelector.style.display = 'none'
+    document.body.appendChild(fileSelector)
+    await new Promise(resolve => {
+      fileSelector.setAttribute('type', 'file')
+      fileSelector.setAttribute('accept', ext)
+      fileSelector.addEventListener('change', () => {
+        resolve()
+      })
+      fileSelector.click()
+    }).finally(() => {
+      document.body.removeChild(fileSelector)
+    })
+    if (!fileSelector.files || !fileSelector.files.length) {
+      return
+    }
+    return fileSelector.files[0]
+  }
+  const init = async () => {
+
+    const region = new URL(window.location.href).searchParams.get('region')
+    const res = await fetch('test-1.xmind')
+    const viewer = new XMindEmbedViewer({
+      el: '#mount',
+      file: await res.arrayBuffer(),
+      region: region === 'cn' ? 'cn' : 'global',
+      styles: {
+        'height': '500px',
+        'width': '100%'
+      }
+    })
+
+    const eventLogsElement = document.createElement('div')
+    eventLogsElement.style.height = '500px'
+    eventLogsElement.style.overflow = 'scroll'
+
+    const log = (type, message) => eventLogsElement.innerHTML += `<div style="margin-top: 8px">[${type}] ${typeof message === 'object' && message ? JSON.stringify(message, null, 2) : message}</div>`
+
+    viewer.addEventListener('sheet-switch', payload => log('event: sheet-switch', payload))
+    viewer.addEventListener('zoom-scale-change', payload => log('event: zoom-scale-change', payload))
+    viewer.addEventListener('sheets-change', payload => log('event: sheets-change', payload))
+    viewer.addEventListener('map-ready', payload => log('event: map-ready', payload))
+
+    const loadFile1Button = document.createElement('button')
+    loadFile1Button.textContent = 'Load File 1'
+    loadFile1Button.addEventListener('click', async () => {
+      const res = await fetch('test-1.xmind')
+      viewer.load(await res.arrayBuffer())
+    })
+
+    const loadFile2Button = document.createElement('button')
+    loadFile2Button.textContent = 'Load File 2'
+    loadFile2Button.addEventListener('click', async () => {
+      const res = await fetch('test-2.xmind')
+      viewer.load(await res.arrayBuffer())
+    })
+
+    const loadFileFromComputerButton = document.createElement('button')
+    loadFileFromComputerButton.textContent = 'Open Local File'
+    loadFileFromComputerButton.addEventListener('click', async () => {
+      const file = await selectFileFromLocal('.xmind')
+      if (!file) return
+      viewer.load(await file.arrayBuffer())
+    })
+
+    document.body.appendChild(loadFile1Button)
+    document.body.appendChild(loadFile2Button)
+    document.body.appendChild(loadFileFromComputerButton)
+
+    const zoomScaleInput = document.createElement('input')
+    zoomScaleInput.setAttribute('type', 'number')
+    zoomScaleInput.placeholder = 'Zoom Scale'
+    const zoomScaleConfirm = document.createElement('button')
+    zoomScaleConfirm.textContent = 'Update Zoom Scale'
+    zoomScaleConfirm.addEventListener('click', () => viewer.setZoomScale(parseInt(zoomScaleInput.value)))
+    const fitMapButton = document.createElement('button')
+    fitMapButton.textContent = 'Zoom Scale Fit Map'
+    fitMapButton.addEventListener('click', () => viewer.setFitMap())
+
+    document.body.appendChild(zoomScaleInput)
+    document.body.appendChild(zoomScaleConfirm)
+    document.body.appendChild(fitMapButton)
+
+
+    const sheetIdInput = document.createElement('input')
+    sheetIdInput.placeholder = 'Target Sheet Id'
+    const sheetIdConfirm = document.createElement('button')
+    sheetIdConfirm.textContent = 'Switch to Sheet Id'
+    sheetIdConfirm.addEventListener('click', () => viewer.switchSheet(sheetIdInput.value))
+    document.body.appendChild(sheetIdInput)
+    document.body.appendChild(sheetIdConfirm)
+
+
+    const switchRegionButton = document.createElement('button')
+    switchRegionButton.textContent = region === 'cn' ? 'Switch to global' : '页面速度慢？切到国内源'
+    switchRegionButton.title = region === 'cn' ? '' : '具体如何初始化切换请查看 readme.md 或者 html 代码。'
+    switchRegionButton.addEventListener('click', () => {
+      const url = new URL(window.location.href)
+      url.searchParams.set('region', region === 'cn' ? 'global' : 'cn')
+      window.location.href = url.toString()
+    })
+    document.body.appendChild(switchRegionButton)
+
+    document.body.appendChild(eventLogsElement)
+
+    window.viewer = viewer
+  }
+
+  init()
