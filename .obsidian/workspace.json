@@ -154,20 +154,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a9fd547089fc065d",
+  "active": "c76005c991f51ed3",
   "lastOpenFiles": [
+    "index.js.map",
+    "index.js",
+    "index.d.ts",
+    "iframe-controller.js.map",
+    "iframe-controller.js",
+    "iframe-controller.d.ts",
+    "channel-controller.js.map",
+    "channel-controller.js",
+    "channel-controller.d.ts",
     "未命名.md",
     "README.md",
     "umd/xmind-embed-viewer.js.map",
     "umd/xmind-embed-viewer.js",
-    "umd",
-    "esm/index.js.map",
-    "esm/index.js",
-    "esm/index.d.ts",
-    "esm/iframe-controller.js.map",
-    "esm/iframe-controller.js",
-    "esm/iframe-controller.d.ts",
-    "esm/channel-controller.js.map",
     "assets/history.gif",
     "assets/hash.gif",
     "assets/xmind-b6f6b3ca68.svg",
@@ -200,7 +201,6 @@
     "articles/optimization/network/pic-optim.md",
     "articles/optimization/network/http.md",
     "articles/optimization/network/gaip-principle.md",
-    "articles/optimization/browser-render/server-render.md",
-    "articles/optimization/browser-render/dom-operate-optim.md"
+    "articles/optimization/browser-render/server-render.md"
   ]
 }
