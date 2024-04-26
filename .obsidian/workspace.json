@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "未命名.md",
+                "file": "123.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名.md",
+                "file": "123.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名.md",
+                "file": "123.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名.md"
+                "file": "123.md"
               }
             }
           },
@@ -154,12 +154,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9293863875c568aa",
+  "active": "a9fd547089fc065d",
   "lastOpenFiles": [
-    "未命名.md",
+    "123.md",
+    "index.html",
+    "test-2.xmind",
+    "test-1.xmind",
     "test.md",
     "index.js",
-    "index.html",
     "content.json",
     "ui/css/body.css",
     "ui/css",
@@ -168,10 +170,8 @@
     "ui",
     "front-end-blog/other/icon_48.png",
     "front-end-blog/other/icomoon.woff",
-    "front-end-blog/other/icomoon.ttf",
     "front-end-blog/other/history.gif",
     "front-end-blog/other/hash.gif",
-    "front-end-blog/other/favicon.ico",
     "front-end-blog/other/b7826cce6a41337073c10cc18b582885f8c2590b.svg",
     "front-end-blog/other/516d97eb30b500031622e93662825c8a66482f7f.svg",
     "front-end-blog/other/8e025f707ad25430df560d95be1ab9710e8a01a1.svg",
@@ -200,7 +200,6 @@
     "articles/vue/vuex/vuex.md",
     "articles/vue/vue2/watcher-update.md",
     "articles/vue/vue2/watch.md",
-    "articles/vue/vue2/reactive-function-desc.md",
     "assets/history.gif"
   ]
 }
