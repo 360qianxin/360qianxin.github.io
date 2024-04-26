@@ -11,8 +11,12 @@
             "id": "a9fd547089fc065d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md"
+                "file": "README.md"
               }
             }
           },
@@ -148,8 +154,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c76005c991f51ed3",
+  "active": "a9fd547089fc065d",
   "lastOpenFiles": [
+    "readme.md",
     "articles/react/react/index.md",
     "articles/react/react",
     "articles/react/nav.js",
@@ -184,7 +191,6 @@
     "articles/optimization/index.md",
     "articles/optimization/browser-render",
     "articles/optimization/actual",
-    "articles/algorithm/linkedList/sort-list.md",
-    "articles/algorithm/linkedList/reverse-nodes-in-k-group.md"
+    "articles/algorithm/linkedList/sort-list.md"
   ]
 }
