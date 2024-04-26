@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "未命名.md",
+                "file": "test.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名.md",
+                "file": "test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名.md",
+                "file": "test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名.md"
+                "file": "test.md"
               }
             }
           },
@@ -154,21 +154,44 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c76005c991f51ed3",
+  "active": "a9fd547089fc065d",
   "lastOpenFiles": [
-    "index.js.map",
-    "index.js",
-    "index.d.ts",
-    "iframe-controller.js.map",
-    "iframe-controller.js",
-    "iframe-controller.d.ts",
-    "channel-controller.js.map",
-    "channel-controller.js",
-    "channel-controller.d.ts",
-    "未命名.md",
-    "README.md",
-    "umd/xmind-embed-viewer.js.map",
-    "umd/xmind-embed-viewer.js",
+    "test.md",
+    "front-end-blog/use/useFancybox.js",
+    "front-end-blog/use",
+    "front-end-blog/components/XmindViewer.vue",
+    "front-end-blog/components/TimeLineItem.vue",
+    "front-end-blog/components/Tag.vue",
+    "front-end-blog/components/Rail.vue",
+    "front-end-blog/components/Loading.vue",
+    "front-end-blog/components/Lazy.vue",
+    "front-end-blog/components",
+    "front-end-blog/buildstart/index.js",
+    "front-end-blog/articles/write/xhr-request.md",
+    "front-end-blog/articles/write/string-template-replacement.md",
+    "front-end-blog/articles/write/storage_size.md",
+    "front-end-blog/articles/write/reduce.md",
+    "front-end-blog/articles/write/promises-output-in-sequence.md",
+    "front-end-blog/articles/write/promise.md",
+    "front-end-blog/articles/write/parse-url.md",
+    "front-end-blog/articles/write/objcreate.md",
+    "front-end-blog/articles/write/new.md",
+    "front-end-blog/articles/write/jsonp.md",
+    "front-end-blog/articles/write/instanceof.md",
+    "front-end-blog/articles/write/index.md",
+    "front-end-blog/articles/write/hex2Rgb.md",
+    "front-end-blog/articles/write/deep_clone.md",
+    "front-end-blog/articles/write/curry.md",
+    "front-end-blog/articles/write/concurrency-conrol.md",
+    "front-end-blog/articles/write/call_apply.md",
+    "front-end-blog/articles/write/bind.md",
+    "front-end-blog/articles/write/add-event-listeners.md",
+    "front-end-blog/articles/vue/vuex/vuex.md",
+    "front-end-blog/articles/vue/vue2/watcher-update.md",
+    "front-end-blog/articles/vue/vue2/watch.md",
+    "front-end-blog/articles/vue/vue2/reactive-function-desc.md",
+    "front-end-blog/articles/vue/vue2/mount.md",
+    "front-end-blog/articles/vue/vue2/mind.md",
     "assets/history.gif",
     "assets/hash.gif",
     "assets/xmind-b6f6b3ca68.svg",
@@ -178,29 +201,6 @@
     "assets/b7826cce6a41337073c10cc18b582885f8c2590b.svg",
     "assets/astrocat.png",
     "assets/8e025f707ad25430df560d95be1ab9710e8a01a1.svg",
-    "assets/737daf7ebf27157b21a738c93222f8c63318e796.svg",
-    "articles/algorithm/sort/select-sort.md",
-    "articles/algorithm/sort/quick-sort.md",
-    "articles/algorithm/sort/merge-sort.md",
-    "articles/algorithm/sort/insert-sort.md",
-    "articles/algorithm/sort/bubble-sort.md",
-    "readme.md",
-    "articles/react/react/index.md",
-    "articles/react/index.md",
-    "articles/other/regx.md",
-    "articles/other/router.md",
-    "articles/other/refresh-token.md",
-    "articles/other/packagemanager.md",
-    "articles/other/index.md",
-    "articles/other/hardlink&softlink.md",
-    "articles/optimization/browser-render/browser-render-flow.md",
-    "articles/optimization/webstorage/http-cache.md",
-    "articles/optimization/webstorage/cdn-cache.md",
-    "articles/optimization/webstorage/browser-local-cache.md",
-    "articles/optimization/network/webpack-package-optim-policy.md",
-    "articles/optimization/network/pic-optim.md",
-    "articles/optimization/network/http.md",
-    "articles/optimization/network/gaip-principle.md",
-    "articles/optimization/browser-render/server-render.md"
+    "assets/737daf7ebf27157b21a738c93222f8c63318e796.svg"
   ]
 }
