@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "未命名.md"
               }
             }
           },
@@ -154,21 +154,22 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c76005c991f51ed3",
+  "active": "a9fd547089fc065d",
   "lastOpenFiles": [
-    "assets/NeverMind-Regular-7029f81601.woff2",
-    "assets/NeverMind-Medium-83bbf3dcef.woff2",
-    "assets/NeverMind-Light-42157a7e6d.woff2",
-    "assets/NeverMind-Extrabold-bd140993a8.woff2",
-    "assets/NeverMind-DemiBold-075c5193f2.woff2",
-    "assets/NeverMind-Bold-ee2206071a.woff2",
-    "assets/index_2.html",
-    "assets/index_1.html",
-    "assets/index.html",
+    "未命名.md",
+    "README.md",
+    "umd/xmind-embed-viewer.js.map",
+    "umd/xmind-embed-viewer.js",
+    "umd",
+    "esm/index.js.map",
+    "esm/index.js",
+    "esm/index.d.ts",
+    "esm/iframe-controller.js.map",
+    "esm/iframe-controller.js",
+    "esm/iframe-controller.d.ts",
+    "esm/channel-controller.js.map",
     "assets/history.gif",
     "assets/hash.gif",
-    "assets/464e00b478bc3c604aad6b2518137d5a_180x180.awebp",
-    "assets/7cHqv4kjgoGqM7E30-8s51os.woff2",
     "assets/xmind-b6f6b3ca68.svg",
     "assets/icon_48.png",
     "assets/hero-drone.webp",
@@ -200,7 +201,6 @@
     "articles/optimization/network/http.md",
     "articles/optimization/network/gaip-principle.md",
     "articles/optimization/browser-render/server-render.md",
-    "articles/optimization/browser-render/dom-operate-optim.md",
-    "articles/optimization/browser-render/css-optim.md"
+    "articles/optimization/browser-render/dom-operate-optim.md"
   ]
 }
