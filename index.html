@@ -1,135 +1,93 @@
-<!DOCTYPE html><html lang="en" data-scrapbook-source="https://xmindltd.github.io/xmind-embed-viewer/" data-scrapbook-create="20240426160333288" data-scrapbook-title="XMind Embed Viewer (Development)"><head>
-  <meta charset="UTF-8">
-  <title>XMind Embed Viewer (Development)</title>
-</head>
-<body>
-<div style="max-width: 1280px">
-  <p>The earliest known appearance of the phrase is from <i><a href="https://xmindltd.github.io/wiki/The_Boston_Journal" title="The Boston Journal" data-scrapbook-orig-attr-href-20240426160333288="/wiki/The_Boston_Journal">The
-    Boston Journal</a></i>. In an article titled "Current Notes" in the February 9, 1885, edition, the phrase is mentioned
-    as a good practice <a href="https://xmindltd.github.io/wiki/Sentence_(linguistics)" title="Sentence (linguistics)" data-scrapbook-orig-attr-href-20240426160333288="/wiki/Sentence_(linguistics)">sentence</a> for writing
-    students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter
-    of the alphabet: 'A quick brown fox jumps over the lazy dog.'"<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> Dozens of other newspapers published the phrase over the next few months, all
-    using the version of the sentence starting with "A" rather than "The".<sup id="cite_ref-:0_3-0" class="reference"><a href="#cite_note-:0-3">[3]</a></sup> The earliest known use of the phrase starting with "The" is from the 1888 book
-    <i>Illustrative Shorthand</i> by Linda Bronson.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> The modern form (starting with "The") became more common despite the fact that it
-    is slightly longer than the original (starting with "A").
-  </p>
-  <div id="mount">
-
-  </div>
-</div>
-
-<script src="xmind-embed-viewer.js" data-scrapbook-orig-attr-src-20240426160333288="xmind-embed-viewer.js"></script>
-<script>
-  const selectFileFromLocal = async (ext) => {
-    const fileSelector = document.createElement('input')
-    fileSelector.style.display = 'none'
-    document.body.appendChild(fileSelector)
-    await new Promise(resolve => {
-      fileSelector.setAttribute('type', 'file')
-      fileSelector.setAttribute('accept', ext)
-      fileSelector.addEventListener('change', () => {
-        resolve()
-      })
-      fileSelector.click()
-    }).finally(() => {
-      document.body.removeChild(fileSelector)
-    })
-    if (!fileSelector.files || !fileSelector.files.length) {
-      return
-    }
-    return fileSelector.files[0]
-  }
-  const init = async () => {
-
-    const region = new URL(window.location.href).searchParams.get('region')
-    const res = await fetch('test-1.xmind')
-    const viewer = new XMindEmbedViewer({
-      el: '#mount',
-      file: await res.arrayBuffer(),
-      region: region === 'cn' ? 'cn' : 'global',
-      styles: {
-        'height': '500px',
-        'width': '100%'
-      }
-    })
-
-    const eventLogsElement = document.createElement('div')
-    eventLogsElement.style.height = '500px'
-    eventLogsElement.style.overflow = 'scroll'
-
-    const log = (type, message) => eventLogsElement.innerHTML += `<div style="margin-top: 8px">[${type}] ${typeof message === 'object' && message ? JSON.stringify(message, null, 2) : message}</div>`
-
-    viewer.addEventListener('sheet-switch', payload => log('event: sheet-switch', payload))
-    viewer.addEventListener('zoom-scale-change', payload => log('event: zoom-scale-change', payload))
-    viewer.addEventListener('sheets-change', payload => log('event: sheets-change', payload))
-    viewer.addEventListener('map-ready', payload => log('event: map-ready', payload))
-
-    const loadFile1Button = document.createElement('button')
-    loadFile1Button.textContent = 'Load File 1'
-    loadFile1Button.addEventListener('click', async () => {
-      const res = await fetch('test-1.xmind')
-      viewer.load(await res.arrayBuffer())
-    })
-
-    const loadFile2Button = document.createElement('button')
-    loadFile2Button.textContent = 'Load File 2'
-    loadFile2Button.addEventListener('click', async () => {
-      const res = await fetch('test-2.xmind')
-      viewer.load(await res.arrayBuffer())
-    })
-
-    const loadFileFromComputerButton = document.createElement('button')
-    loadFileFromComputerButton.textContent = 'Open Local File'
-    loadFileFromComputerButton.addEventListener('click', async () => {
-      const file = await selectFileFromLocal('.xmind')
-      if (!file) return
-      viewer.load(await file.arrayBuffer())
-    })
-
-    document.body.appendChild(loadFile1Button)
-    document.body.appendChild(loadFile2Button)
-    document.body.appendChild(loadFileFromComputerButton)
-
-    const zoomScaleInput = document.createElement('input')
-    zoomScaleInput.setAttribute('type', 'number')
-    zoomScaleInput.placeholder = 'Zoom Scale'
-    const zoomScaleConfirm = document.createElement('button')
-    zoomScaleConfirm.textContent = 'Update Zoom Scale'
-    zoomScaleConfirm.addEventListener('click', () => viewer.setZoomScale(parseInt(zoomScaleInput.value)))
-    const fitMapButton = document.createElement('button')
-    fitMapButton.textContent = 'Zoom Scale Fit Map'
-    fitMapButton.addEventListener('click', () => viewer.setFitMap())
-
-    document.body.appendChild(zoomScaleInput)
-    document.body.appendChild(zoomScaleConfirm)
-    document.body.appendChild(fitMapButton)
-
-
-    const sheetIdInput = document.createElement('input')
-    sheetIdInput.placeholder = 'Target Sheet Id'
-    const sheetIdConfirm = document.createElement('button')
-    sheetIdConfirm.textContent = 'Switch to Sheet Id'
-    sheetIdConfirm.addEventListener('click', () => viewer.switchSheet(sheetIdInput.value))
-    document.body.appendChild(sheetIdInput)
-    document.body.appendChild(sheetIdConfirm)
-
-
-    const switchRegionButton = document.createElement('button')
-    switchRegionButton.textContent = region === 'cn' ? 'Switch to global' : '页面速度慢？切到国内源'
-    switchRegionButton.title = region === 'cn' ? '' : '具体如何初始化切换请查看 readme.md 或者 html 代码。'
-    switchRegionButton.addEventListener('click', () => {
-      const url = new URL(window.location.href)
-      url.searchParams.set('region', region === 'cn' ? 'global' : 'cn')
-      window.location.href = url.toString()
-    })
-    document.body.appendChild(switchRegionButton)
-
-    document.body.appendChild(eventLogsElement)
-
-    window.viewer = viewer
-  }
-
-  init()
-</script>
-
-</body></html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>XMind Embed Viewer</title>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <style>  
+        #file-list {  
+            margin-bottom: 10px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div id="file-list" style="max-width: 1280px">  
+        <h3>Current Files:</h3>  
+        <ul id="file-list-items"></ul>  
+        <button id="load-next-file">加载下一个文件</button>  
+        <div id="mount"></div>  
+    </div>  
+    <script>  
+        // 用于存储当前加载的文件索引  
+        let currentFileIndex = 0;  
+          
+        // 遍历当前目录下的所有.xmind文件，并添加到文件列表中  
+        function populateFileList() {  
+            const fileListItems = $('#file-list-items');  
+            const files = $.map($('input[type=file][multiple]')[0].files, function(file) {  
+                return file.name;  
+            });  
+              
+            $.each(files, function(index, fileName) {  
+                fileListItems.append(`<li><a href="${fileName}">Load File ${index + 1}: ${fileName}</a></li>`);  
+            });  
+              
+            // 假设xmind-embed-viewer-init函数用于初始化嵌入的xmind文件  
+            // 这里我们只是模拟调用，你需要替换成实际的初始化函数  
+            if (files.length > 0) {  
+                loadXMindFile(files[0]);  
+            }  
+        }  
+          
+        // 加载指定的xmind文件  
+        function loadXMindFile(fileName) {  
+            // 这里应该是实际的加载xmind文件的代码，比如通过iframe或者API调用  
+            console.log(`加载文件: ${fileName}`);  
+            // 假设有一个显示文件的函数，你需要替换成实际的显示逻辑  
+            displayXMindFile(fileName);  
+              
+            // 更新当前文件索引  
+            currentFileIndex = files.indexOf(fileName) + 1;  
+              
+            // 如果还有更多文件，启用加载下一个文件的按钮  
+            if (currentFileIndex < files.length) {  
+                $('#load-next-file').prop('disabled', false);  
+            } else {  
+                $('#load-next-file').prop('disabled', true);  
+            }  
+        }  
+          
+        // 显示xmind文件的函数（需要你自己实现具体的显示逻辑）  
+        function displayXMindFile(fileName) {  
+            // 这里应该是具体的显示xmind文件的代码  
+            console.log(`显示文件: ${fileName}`);  
+            // 假设将文件名显示到某个元素中  
+            $('#mount').text(`当前显示文件: ${fileName}`);  
+        }  
+          
+        // 当页面加载完成后，初始化文件列表  
+        $(document).ready(function() {  
+            populateFileList();  
+              
+            // 给加载下一个文件的按钮添加点击事件处理函数  
+            $('#load-next-file').on('click', function() {  
+                const files = $('input[type=file][multiple]')[0].files;  
+                if (currentFileIndex < files.length) {  
+                    const nextFileName = files[currentFileIndex].name;  
+                    loadXMindFile(nextFileName);  
+                } else {  
+                    alert('没有更多文件可以加载');  
+                }  
+            });  
+        });  
+    </script>  
+      
+    <!-- 这是一个隐藏的input元素，用于获取当前目录下的所有.xmind文件 -->  
+    <input type="file" id="xmindFiles" name="xmindFiles[]" multiple webkitdirectory directory style="display:none;">  
+      
+    <script>  
+        // 使用隐藏的input元素自动选择当前目录下的所有.xmind文件  
+        $(document).ready(function() {  
+            $('#xmindFiles').on('change', function() {  
+                populateFileList();  
+            });
