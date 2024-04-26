@@ -156,6 +156,13 @@
   },
   "active": "c76005c991f51ed3",
   "lastOpenFiles": [
+    "articles/algorithm/sort/test.js",
+    "articles/algorithm/sort/select-sort.md",
+    "articles/algorithm/sort/quick-sort.md",
+    "articles/algorithm/sort/merge-sort.md",
+    "articles/algorithm/sort/insert-sort.md",
+    "articles/algorithm/sort/bubble-sort.md",
+    "articles/algorithm/sort",
     "front-end-blog/assets/index-e8208448d6.css",
     "front-end-blog/assets/icon_48.png",
     "front-end-blog/assets/icomoon.woff",
@@ -169,8 +176,6 @@
     "front-end-blog/assets/7cHqv4kjgoGqM7E30-8s51os.woff2",
     "front-end-blog/assets/7cHqv4kjgoGqM7E30-8s6VospT4.woff2",
     "front-end-blog/assets/7cHqv4kjgoGqM7E30-8s6FospT4.woff2",
-    "front-end-blog/assets/7cHqv4kjgoGqM7E3t-4s51os.woff2",
-    "front-end-blog/assets/7cHqv4kjgoGqM7E3t-4s6VospT4.woff2",
     "front-end-blog/assets/5e5e958d88876705afa3d4e9e3ddd3ddcc8459a4.svg",
     "front-end-blog/assets/xmind-b6f6b3ca68.svg",
     "front-end-blog/other/hero-drone.webp",
@@ -196,11 +201,6 @@
     "articles/optimization/network/gaip-principle.md",
     "articles/optimization/browser-render/server-render.md",
     "articles/optimization/browser-render/dom-operate-optim.md",
-    "articles/optimization/browser-render/css-optim.md",
-    "articles/optimization/actual/reference-resources-on-demand.md",
-    "articles/optimization/actual/lazy-loader.md",
-    "articles/optimization/actual/event-proxy.md",
-    "articles/optimization/actual/debounce&throttle.md",
-    "articles/optimization/index.md"
+    "articles/optimization/browser-render/css-optim.md"
   ]
 }
