@@ -11,12 +11,8 @@
             "id": "a9fd547089fc065d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,43 +148,43 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a9fd547089fc065d",
+  "active": "c76005c991f51ed3",
   "lastOpenFiles": [
-    "webpack.config.ts",
-    "tsconfig.umd.json",
-    "tsconfig.json",
-    "tsconfig.esm.json",
-    "readme.md",
-    "package-lock.json",
-    "package.json",
-    "LICENSE.md",
-    "src/index.ts",
-    "src/iframe-controller.ts",
-    "src/channel-controller.ts",
-    "src",
-    "public/test-2.xmind",
-    "README.md",
-    "front-end-blog-main/articles/write/xhr-request.md",
-    "front-end-blog-main/articles/write/string-template-replacement.md",
-    "front-end-blog-main/articles/write/storage_size.md",
-    "front-end-blog-main/articles/write/reduce.md",
-    "front-end-blog-main/articles/write/promises-output-in-sequence.md",
-    "front-end-blog-main/articles/write/promise.md",
-    "front-end-blog-main/articles/write/parse-url.md",
-    "front-end-blog-main/articles/write/objcreate.md",
-    "front-end-blog-main/articles/write/new.md",
-    "front-end-blog-main/articles/write/jsonp.md",
-    "front-end-blog-main/articles/write/instanceof.md",
-    "front-end-blog-main/articles/write/index.md",
-    "front-end-blog-main/articles/write/hex2Rgb.md",
-    "front-end-blog-main/articles/write/deep_clone.md",
-    "front-end-blog-main/articles/write/curry.md",
-    "front-end-blog-main/articles/write/concurrency-conrol.md",
-    "front-end-blog-main/articles/write/call_apply.md",
-    "front-end-blog-main/articles/write/bind.md",
-    "front-end-blog-main/articles/write/add-event-listeners.md",
-    "front-end-blog-main/articles/vue/vuex/vuex.md",
-    "front-end-blog-main/articles/vue/vue2/watcher-update.md",
-    "front-end-blog-main/articles/vue/vue2/watch.md"
+    "articles/react/react/index.md",
+    "articles/react/react",
+    "articles/react/nav.js",
+    "articles/react/index.md",
+    "articles/react",
+    "articles/other/regx.md",
+    "articles/other/router.md",
+    "articles/other/refresh-token.md",
+    "articles/other/nav.js",
+    "articles/other/packagemanager.md",
+    "articles/other/index.md",
+    "articles/other/hardlink&softlink.md",
+    "articles/other",
+    "articles/optimization/browser-render/browser-render-flow.md",
+    "articles/optimization/webstorage/http-cache.md",
+    "articles/optimization/webstorage/cdn-cache.md",
+    "articles/optimization/webstorage/browser-local-cache.md",
+    "articles/optimization/network/webpack-package-optim-policy.md",
+    "articles/optimization/network/pic-optim.md",
+    "articles/optimization/network/http.md",
+    "articles/optimization/network/gaip-principle.md",
+    "articles/optimization/browser-render/server-render.md",
+    "articles/optimization/browser-render/dom-operate-optim.md",
+    "articles/optimization/browser-render/css-optim.md",
+    "articles/optimization/actual/reference-resources-on-demand.md",
+    "articles/optimization/actual/lazy-loader.md",
+    "articles/optimization/actual/event-proxy.md",
+    "articles/optimization/actual/debounce&throttle.md",
+    "articles/optimization/webstorage",
+    "articles/optimization/network",
+    "articles/optimization/nav.js",
+    "articles/optimization/index.md",
+    "articles/optimization/browser-render",
+    "articles/optimization/actual",
+    "articles/algorithm/linkedList/sort-list.md",
+    "articles/algorithm/linkedList/reverse-nodes-in-k-group.md"
   ]
 }
