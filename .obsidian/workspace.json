@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "readme.md"
               }
             }
           },
@@ -156,17 +156,20 @@
   },
   "active": "a9fd547089fc065d",
   "lastOpenFiles": [
-    "front-end-blog/assets/style.df58f81c.css",
-    "front-end-blog/assets/新建文本文档.txt",
-    "front-end-blog/assets/新建文件夹",
-    "front-end-blog/assets",
-    "front-end-blog/新建文件夹",
-    "front-end-blog",
-    "新建文件夹",
-    "front-end-blog-main/use/useFancybox.js",
-    "front-end-blog-main/use",
-    "front-end-blog-main/components/TimeLineItem.vue",
-    "front-end-blog-main/components/XmindViewer.vue",
+    "webpack.config.ts",
+    "tsconfig.umd.json",
+    "tsconfig.json",
+    "tsconfig.esm.json",
+    "readme.md",
+    "package-lock.json",
+    "package.json",
+    "LICENSE.md",
+    "src/index.ts",
+    "src/iframe-controller.ts",
+    "src/channel-controller.ts",
+    "src",
+    "public/test-2.xmind",
+    "README.md",
     "front-end-blog-main/articles/write/xhr-request.md",
     "front-end-blog-main/articles/write/string-template-replacement.md",
     "front-end-blog-main/articles/write/storage_size.md",
@@ -188,9 +191,6 @@
     "front-end-blog-main/articles/write/add-event-listeners.md",
     "front-end-blog-main/articles/vue/vuex/vuex.md",
     "front-end-blog-main/articles/vue/vue2/watcher-update.md",
-    "front-end-blog-main/articles/vue/vue2/watch.md",
-    "front-end-blog-main/articles/vue/vue2/reactive-function-desc.md",
-    "front-end-blog-main/articles/vue/vue2/mount.md",
-    "front-end-blog-main/articles/vue/vue2/mind.md"
+    "front-end-blog-main/articles/vue/vue2/watch.md"
   ]
 }

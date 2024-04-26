@@ -1,34 +1,53 @@
 {
-  "name": "lvzl-blog",
-  "version": "1.0.0",
-  "description": "write something",
-  "main": "index.js",
-  "keywords": [
-    "前端知识总结",
-    "笔记",
-    "个人知识库"
+  "name": "xmind-embed-viewer",
+  "version": "1.2.0",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "typings": "dist/esm/index.d.ts",
+  "files": [
+    "dist/**/*"
   ],
-  "author": "lvzl",
-  "license": "ISC",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build && node ./buildend/index.js",
-    "docs:preview": "vitepress preview",
-    "sync-juejin-articles": "node ./buildstart/index.js"
+    "prepare": "npm run lint && npm run build",
+    "build": "webpack --config-name prod-umd && tsc -p tsconfig.esm.json",
+    "dev": "webpack serve --config-name dev",
+    "lint": "eslint src --ext .ts"
   },
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0",
-    "node-fetch": "^3.3.2",
-    "vitepress": "1.0.0-beta.5"
-  },
-  "dependencies": {
-    "@fancyapps/ui": "^5.0.22",
-    "jsdom": "^22.1.0",
-    "xmind-embed-viewer": "^1.1.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+  "maintainers": [
+    {
+      "name": "zhiteng",
+      "email": "dyingsunlight@gmail.com"
     }
+  ],
+  "keywords": [
+    "xmind",
+    "mindmap",
+    "mindmaps",
+    "mindmap-viewer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xmindltd/xmind-embed-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xmindltd/xmind-embed-viewer/issues",
+    "email": "dyingsunlight@gmail.com"
+  },
+  "homepage": "https://github.com/xmindltd/xmind-embed-viewer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "@types/webpack": "^5.28.1",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

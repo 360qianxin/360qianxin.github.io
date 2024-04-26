@@ -1,27 +1,93 @@
-- 🧑🏼‍💻 Record the learning content here
-  include:
-  - 😀 Knowledge of web front-end (HTML, CSS, JavaScript)
-  - 😃 Vue delves into learning
-  - 😄 Content sharing in work
-  - 😆 Tips for working
-  - 😅 sync juejin articles
-- 📇 Contact me: better-lvzl@foxmail.com
-- 🔥 Access address: https://lv-z-l.github.io/front-end-blog/
-- 💥 juejin: https://juejin.cn/user/1055186511205390
-      <link rel="preload stylesheet" href="/front-end-blog/assets/style.df58f81c.css" as="style">
-    <script type="module" src="/front-end-blog/assets/app.d4a83526.js"></script>
-    <link rel="preload" href="/front-end-blog/assets/inter-roman-latin.2ed14f66.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="modulepreload" href="/front-end-blog/assets/chunks/framework.c9171d5b.js">
-  <link rel="modulepreload" href="/front-end-blog/assets/chunks/theme.a02c4d3a.js">
-  <link rel="modulepreload" href="/front-end-blog/assets/chunks/Loading.b8942365.js">
-  <link rel="modulepreload" href="/front-end-blog/assets/index.md.89c07abc.lean.js">
+# XMind Embed Viewer
+Use XMind share to present your `.xmind` files on your blog or website.
 
-|                                                                                                                                                                  |                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <link rel="preload stylesheet" href="[/front-end-blog/assets/style.df58f81c.css](https://lv-z-l.github.io/front-end-blog/assets/style.df58f81c.css)" as="style"> |                                                                                                                                                                                                                   |
-|                                                                                                                                                                  | <script type="module" src="[/front-end-blog/assets/app.d4a83526.js](https://lv-z-l.github.io/front-end-blog/assets/app.d4a83526.js)"></script>                                                                    |
-|                                                                                                                                                                  | <link rel="preload" href="[/front-end-blog/assets/inter-roman-latin.2ed14f66.woff2](https://lv-z-l.github.io/front-end-blog/assets/inter-roman-latin.2ed14f66.woff2)" as="font" type="font/woff2" crossorigin=""> |
-|                                                                                                                                                                  | <link rel="modulepreload" href="[/front-end-blog/assets/chunks/framework.c9171d5b.js](https://lv-z-l.github.io/front-end-blog/assets/chunks/framework.c9171d5b.js)">                                              |
-|                                                                                                                                                                  | <link rel="modulepreload" href="[/front-end-blog/assets/chunks/theme.a02c4d3a.js](https://lv-z-l.github.io/front-end-blog/assets/chunks/theme.a02c4d3a.js)">                                                      |
-|                                                                                                                                                                  | <link rel="modulepreload" href="[/front-end-blog/assets/chunks/Loading.b8942365.js](https://lv-z-l.github.io/front-end-blog/assets/chunks/Loading.b8942365.js)">                                                  |
-|                                                                                                                                                                  | <link rel="modulepreload" href="[/front-end-blog/assets/index.md.89c07abc.lean.js](https://lv-z-l.github.io/front-end-blog/assets/index.md.89c07abc.lean.js)">                                                    |
+[Demo](https://xmindltd.github.io/xmind-embed-viewer/)
+
+## Quick start
+### Install
+As an npm module
+
+```shell
+npm i xmind-embed-viewer
+```
+
+Or alternatively from `unpkg`/`jsdelivr` with a script tag as a UMD bundle
+```html
+<script src="https://unpkg.com/xmind-embed-viewer/dist/umd/xmind-embed-viewer.js"></script>
+<!-- or https://www.jsdelivr.com/npm/xmind-embed-viewer/dist/umd/xmind-embed-viewer.js -->
+<script> // window.XMindEmbedViewer are available now. </script>
+```
+### Base usage
+```typescript
+const viewer = new XMindEmbedViewer({
+  el: '#container-or-iframe-selector', // HTMLElement | HTMLIFrameElement | string
+  // 如果在中国大陆境内速度慢，可以添加的参数 `region: 'cn'` 改为使用 xmind.cn 的图库作为依赖。
+  // region: 'cn' //optinal, global(default) or cn
+})
+fetch('test-1.xmind')
+  .then(res => res.arrayBuffer())
+  .then(file => viewer.load(file))
+```
+The example are using [HTTP Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
+See also demo source code [here](./public/index.html).
+
+### Methods
+#### Get viewer state
+```typescript
+console.log('Current zoomscales: ', viewer.zoomScale)
+console.log('Current activated sheet id: ', viewer.currentSheetId)
+console.log('All Sheets: ', viewer.sheets)
+```
+
+#### Load file into viewer
+`viewer.load` are only accept `ArrayBuffer` object.
+```typescript
+fetch('test-1.xmind')
+  .then(res => res.arrayBuffer())
+  .then(file => viewer.load(file))
+```
+#### ZoomScale Control
+Use extract scale value, Range: `50` - `500`
+```typescript
+viewer.setZoomScale(100)
+```
+Auto-fits with container bounds
+```typescript
+viewer.setFitMap()
+```
+
+#### Sheet Control
+You can use `viewer.sheets` to retrieve all sheet attribute.
+```typescript
+viewer.switchSheet('sheet-id')
+```
+
+#### Update iframe style
+```typescript
+viewer.setStyles({
+  'width': '100%',
+  // CSS styles are available here
+})
+```
+
+### Events
+#### Add listener
+```typescript
+const callback = (payload) => {
+    console.log('Event callback with payload', payload)
+}
+viewer.addEventListener('event-name', callback)
+viewer.removeEventListener('event-name', callback)
+```
+#### Available events:
+* `map-ready`
+* `zoom-change`
+* `sheet-switch`
+* `sheets-load`
+
+## License
+This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) file for details.
+
+
+34444
