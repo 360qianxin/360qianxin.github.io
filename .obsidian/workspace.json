@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "3741cddf2357a77b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d45ac664c24a3fc6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9fd547089fc065d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "93b9b4bd072a726b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c2ff5d59395d7d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9293863875c568aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ce3bebeaba668ef0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fe593685e0b7532e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "177b12cf4cb3ab40",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb5b7a5af7c656e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3886c613d0aa5950",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fab158469b8532c8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5ac5c7e592da3a93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fc1b19bd48ac75fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "c76005c991f51ed3",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "a9fd547089fc065d",
+  "lastOpenFiles": [
+    "articles/write/xhr-request.md",
+    "articles/write/string-template-replacement.md",
+    "articles/write/reduce.md",
+    "articles/write/storage_size.md",
+    "articles/write/promises-output-in-sequence.md",
+    "articles/write/promise.md",
+    "articles/write/parse-url.md",
+    "articles/write/objcreate.md",
+    "articles/write/new.md",
+    "articles/write/nav.js",
+    "articles/write/jsonp.md",
+    "articles/write/instanceof.md",
+    "articles/write/index.md",
+    "articles/write/hex2Rgb.md",
+    "articles/write/deep_clone.md",
+    "articles/write/curry.md",
+    "articles/write/concurrency-conrol.md",
+    "articles/write/call_apply.md",
+    "articles/write/bind.md",
+    "articles/write/add-event-listeners.md",
+    "articles/write",
+    "articles/vue/vuex/vuex.md",
+    "articles/vue/vue2/watcher-update.md",
+    "articles/vue/vue2/watch.md",
+    "articles/vue/vue2/reactive-function-desc.md",
+    "articles/vue/vue2/mount.md",
+    "articles/vue/vue2/mind.md",
+    "articles/vue/vue2/init.md",
+    "articles/vue/vuex",
+    "articles/vue/vue2",
+    "articles/vue/vue-router",
+    "articles/vue/nav.js",
+    "articles/vue",
+    "articles/react/react",
+    "articles/react/nav.js",
+    "articles/react"
+  ]
+}
